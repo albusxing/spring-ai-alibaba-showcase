@@ -1,24 +1,20 @@
-
 server:
-  port: 18094
-  servlet:
-    # 解决使用flux流式返回乱码
-    encoding:
-      enabled: true
-      force: true
-      charset: UTF-8
+  port: 8080  #端口
 spring:
+  main:
+    banner-mode: off
   application:
-    name: mcp-server-sse
+    name: my-mcp-server-sse
   ai:
     mcp:
       server:
+        enabled: true
         name: my-weather-mcp-server-sse
+        version: 1.0.0
+        # 服务类型 异步，支持 SYNC 和 ASYNC
         type: ASYNC  # Recommended for reactive applications
         # 配置 sse 的根路径，默认值为 /sse
         # 下面的最终路径为 ip:port/sse/mcp
         protocol: sse
         sse-endpoint: /sse
         sse-message-endpoint: /mcp
-        version: 1.0.0
-

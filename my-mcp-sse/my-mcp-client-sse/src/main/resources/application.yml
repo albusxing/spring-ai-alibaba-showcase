@@ -1,5 +1,5 @@
 server:
-  port: 18095
+  port: 8888
   servlet:
     # 解决使用flux流式返回乱码
     encoding:
@@ -7,10 +7,9 @@ server:
       force: true
       charset: UTF-8
 
-
 spring:
   application:
-    name: mcp-client-sse
+    name: my-mcp-client-sse
   ai:
     dashscope:
       api-key: ${AI_DASHSCOPE_API_KEY}
@@ -19,7 +18,6 @@ spring:
         sse:
           connections:
             server1:
-              # 实际的连接地址为：http://localhost:18094/sse/mcp
-              url: http://localhost:18094/
-
+              # 实际的连接地址为：http://localhost:8080/sse/mcp
+              url: http://localhost:8080/
 

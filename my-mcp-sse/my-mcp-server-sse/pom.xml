@@ -7,15 +7,24 @@
         <groupId>com.albusxing</groupId>
         <artifactId>spring-ai-alibaba-showcase</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>my-mcp-server-stdio</artifactId>
+    <artifactId>my-mcp-server-sse</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-mcp-server-webflux</artifactId>
+        </dependency>
+
+
+    </dependencies>
 
 </project>

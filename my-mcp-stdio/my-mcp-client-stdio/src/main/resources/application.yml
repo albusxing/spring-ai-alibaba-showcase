@@ -1,0 +1,28 @@
+server:
+  port: 8888
+  servlet:
+    # 解决使用flux流式返回乱码
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+
+spring:
+  application:
+    name: my-mcp-client-stdio
+  ai:
+    dashscope:
+      api-key: ${AI_DASHSCOPE_API_KEY}
+    mcp:
+      client:
+        stdio:
+          servers-configuration: classpath:/mcp-servers-config.json
+        request-timeout: 60s
+
+# 调试日志
+logging:
+  level:
+    io:
+      modelcontextprotocol:
+        client: DEBUG
+        spec: DEBUG

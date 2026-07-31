@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "weather": {
+      "command": "/Users/liguoqing/Library/Java/JavaVirtualMachines/corretto-17.0.10/Contents/Home/bin/java",
+      "args": [
+        "-Dspring.ai.mcp.server.stdio=true",
+        "-Dspring.main.web-application-type=none",
+        "-Dlogging.pattern.console=",
+        "-jar",
+        "/Users/liguoqing/myworkspace2026/java-ai-study/spring-ai-alibaba-showcase/my-mcp-stdio/my-mcp-server-stdio/target/my-mcp-server-stdio-1.0.0-SNAPSHOT.jar"
+      ],
+      "env": {}
+    }
+  }
+}

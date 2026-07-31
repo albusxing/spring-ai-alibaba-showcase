@@ -10,6 +10,29 @@
     <packaging>pom</packaging>
 
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <java.version>17</java.version>
+
+        <!-- Spring AI -->
+        <spring-ai.version>1.1.2</spring-ai.version>
+        <!-- Spring Boot -->
+        <spring-boot.version>3.5.7</spring-boot.version>
+        <!-- Spring AI Alibaba -->
+        <!-- Install Spring AI Alibaba in your local. -->
+        <spring-ai-alibaba.version>1.1.2.0</spring-ai-alibaba.version>
+        <spring-ai-alibaba-extensions.version>1.1.2.0</spring-ai-alibaba-extensions.version>
+
+        <!-- maven plugin -->
+        <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+
+    </properties>
+
+
     <modules>
         <module>01-helloworld</module>
         <module>02-ollama</module>
@@ -34,33 +57,14 @@
         <module>15-clientCallBaiduMcpServer</module>
         <module>12-rag-bailian-knowledge</module>
         <module>todayMenu</module>
-        <module>my-mcp-server</module>
-        <module>my-mcp-server/my-mcp-server-sse</module>
-        <module>my-mcp-server/my-mcp-server-stdio</module>
+
+        <module>my-mcp-sse/my-mcp-client-sse</module>
+        <module>my-mcp-sse/my-mcp-server-sse</module>
+
+        <module>my-mcp-stdio/my-mcp-server-stdio</module>
+        <module>my-mcp-stdio/my-mcp-client-stdio</module>
     </modules>
 
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <java.version>17</java.version>
-
-        <!-- Spring AI -->
-        <spring-ai.version>1.1.2</spring-ai.version>
-        <!-- Spring Boot -->
-        <spring-boot.version>3.5.7</spring-boot.version>
-        <!-- Spring AI Alibaba -->
-        <!-- Install Spring AI Alibaba in your local. -->
-        <spring-ai-alibaba.version>1.1.2.0</spring-ai-alibaba.version>
-        <spring-ai-alibaba-extensions.version>1.1.2.0</spring-ai-alibaba-extensions.version>
-
-        <!-- maven plugin -->
-        <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
-        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-
-    </properties>
 
     <dependencyManagement>
 

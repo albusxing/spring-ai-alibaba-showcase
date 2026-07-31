@@ -23,7 +23,6 @@ public class LLMConfig {
     @Bean
     public ChatClient chatClient(ChatModel chatModel, ToolCallbackProvider tools) {
         return ChatClient.builder(chatModel)
-            //mcp协议，配置见yml文件
             .defaultToolCallbacks(tools.getToolCallbacks())
             .build();
     }

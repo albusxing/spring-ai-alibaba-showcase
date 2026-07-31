@@ -1,7 +1,6 @@
-package com.albusxing.showcase.config;
+package com.albusxng.showcase.config;
 
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.chat.model.ChatModel;
 import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,14 +15,13 @@ public class LLMConfig {
 
     /**
      * ToolCallbackProvider 提供工具回调
-     * @param chatModel
+     * @param chatClientBuilder
      * @param tools
      * @return
      */
     @Bean
-    public ChatClient chatClient(ChatModel chatModel, ToolCallbackProvider tools) {
-        return ChatClient.builder(chatModel)
-            //mcp协议，配置见yml文件
+    public ChatClient chatClient(ChatClient.Builder chatClientBuilder, ToolCallbackProvider tools) {
+        return chatClientBuilder
             .defaultToolCallbacks(tools.getToolCallbacks())
             .build();
     }
