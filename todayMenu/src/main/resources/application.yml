@@ -1,0 +1,19 @@
+server:
+  port: 9527
+  servlet:
+    # 解决使用flux流式返回乱码
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+
+spring:
+  application:
+    name: todayMenu
+  ai:
+    dashscope:
+      api-key: ${AI_DASHSCOPE_API_KEY}
+      agent:
+        options:
+          # 工作流应用 appId
+          app-id: ${APP_ID}

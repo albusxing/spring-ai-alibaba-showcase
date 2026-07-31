@@ -1,0 +1,35 @@
+server:
+  port: 8092
+  servlet:
+    # 解决使用flux流式返回乱码
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+
+spring:
+  application:
+    name: rag-redis-stack
+  data:
+    redis:
+      host: localhost
+      port: 16379          # 对应你的 redis-stack 实际映射端口
+      password: root         # 对应 --requirepass root
+
+  ai:
+    dashscope:
+      api-key: ${AI_DASHSCOPE_API_KEY}
+      chat:
+        enabled: true
+        options:
+          model: glm-5.2
+      embedding:
+        enabled: true
+        options:
+          model: text-embedding-v3
+          dimensions: 1024
+    vectorstore:
+      redis:
+        initialize-schema: true
+        index-name: my-custom-index-
+        prefix: my-custom-embedding-

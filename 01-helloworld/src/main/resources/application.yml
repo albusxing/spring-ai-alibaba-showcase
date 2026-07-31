@@ -1,0 +1,16 @@
+server:
+  port: 8081
+  servlet:
+    # 解决使用flux流式返回乱码
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+
+spring:
+  application:
+    name: helloworld
+  ai:
+    dashscope:
+      api-key: ${AI_DASHSCOPE_API_KEY}
+
