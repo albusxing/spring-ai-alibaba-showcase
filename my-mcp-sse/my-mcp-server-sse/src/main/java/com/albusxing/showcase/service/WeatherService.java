@@ -1,4 +1,4 @@
-package com.albusxing.showcase.servcie;
+package com.albusxing.showcase.service;
 
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.ai.tool.annotation.ToolParam;

@@ -44,18 +44,16 @@
         <module>08-chatMemory4Redis</module>
         <module>08-chatMemory4InMemory</module>
         <module>09-text2Image</module>
-        <module>09-text2Image</module>
         <module>10-text2Voice</module>
         <module>11-embed2Vector</module>
         <module>12-rag-simple</module>
-        <module>12-rag-bailian-agent</module>
         <module>12-rag-redis-stack</module>
+        <module>12-rag-bailian-agent</module>
+        <module>12-rag-bailian-knowledge</module>
         <module>12-rag-milvus</module>
         <module>13-tool-calling</module>
-        <module>14-mcp-server-sse</module>
-        <module>14-mcp-client-sse</module>
         <module>15-clientCallBaiduMcpServer</module>
-        <module>12-rag-bailian-knowledge</module>
+
         <module>todayMenu</module>
 
         <module>my-mcp-sse/my-mcp-client-sse</module>

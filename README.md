@@ -1,2 +1,23 @@
 # Spring AI Alibaba Showcase
 
+- hello world
+- 本地大模型ollama
+- ChatClient和ChatModel
+- SSE
+- 提示词和提示词模板
+- 结构化输出
+- 对话记忆
+- 多模态
+  - 文生图
+  - 文生音
+- 向量存储
+- RAG
+  - 基于内存实现
+  - 基于RedisStack实现
+  - 基于Milvus实现
+  - 对接百炼智能体
+  - 对接百炼知识库
+- Tool Calling
+- MCP
+  - 基于stdio实现
+  - 基于sse实现

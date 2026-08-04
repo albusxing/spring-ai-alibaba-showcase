@@ -1,5 +1,5 @@
 server:
-  port: 18095
+  port: 8015
   servlet:
     # 解决使用flux流式返回乱码
     encoding:
@@ -7,19 +7,17 @@ server:
       force: true
       charset: UTF-8
 
-
 spring:
   application:
-    name: mcp-client-sse
+    name: clientCallBaiduMcpServer
   ai:
     dashscope:
       api-key: ${AI_DASHSCOPE_API_KEY}
     mcp:
       client:
-        sse:
-          connections:
-            server1:
-              # 实际的连接地址为：http://localhost:18094/sse/mcp
-              url: http://localhost:18094/
-
+        request-timeout: 20s
+        toolcallback:
+          enabled: true
+        stdio:
+          servers-configuration: mcp-server.json5
 

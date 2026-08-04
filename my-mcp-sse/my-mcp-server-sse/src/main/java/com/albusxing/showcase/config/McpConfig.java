@@ -1,6 +1,7 @@
 package com.albusxing.showcase.config;
 
 import com.albusxing.showcase.service.OpenMeteoService;
+import com.albusxing.showcase.service.WeatherService;
 import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.ai.tool.method.MethodToolCallbackProvider;
 import org.springframework.context.annotation.Bean;
@@ -16,13 +17,11 @@ public class McpConfig {
     /**
      * 注册工具
      */
-//    @Bean
-//    public List<ToolCallback> tools(OpenMeteoService openMeteoService) {
-//        return List.of(ToolCallbacks.from(openMeteoService));
-//    }
-
     @Bean
-    public ToolCallbackProvider weatherTools(OpenMeteoService openMeteoService) {
-        return MethodToolCallbackProvider.builder().toolObjects(openMeteoService).build();
+    public ToolCallbackProvider weatherTools(OpenMeteoService openMeteoService,
+                                             WeatherService weatherService) {
+        return MethodToolCallbackProvider.builder()
+            .toolObjects(openMeteoService, weatherService)
+            .build();
     }
 }

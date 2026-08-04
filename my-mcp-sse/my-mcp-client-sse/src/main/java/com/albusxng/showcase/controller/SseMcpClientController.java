@@ -16,13 +16,18 @@ import reactor.core.publisher.Flux;
 @RequestMapping("/mcp-client")
 public class SseMcpClientController {
 
+    /**
+     * 使用mcp支持
+     */
     @Resource
-    private ChatClient chatClient; //使用mcp支持
+    private ChatClient chatClient;
 
 
     /**
-     * /mcp-client-sse/chat?userInput=纬度39.9，经度116.4的天气预报
-     *          ==》调用 OpenMeteoService.getWeatherForecastByLocation(39.9, 116.4)
+     * /mcp-client-sse/chat?msg=上海天气 ==》 调用 WeatherService.getWeatherByCity("上海")
+     * /mcp-client-sse/chat?msg=纬度39.9，经度116.4的天气预报
+     *              ==》调用 OpenMeteoService.getWeatherForecastByLocation(39.9, 116.4)
+     *
      * @param userInput
      * @return
      */
